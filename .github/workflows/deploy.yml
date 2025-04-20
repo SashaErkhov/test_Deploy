@@ -22,7 +22,7 @@ jobs:
         run: gem install kamal
 
       - name: secrets
-        run: echo "KAMAL_REGISTRY_PASSWORD=${{ secrets.DOCKER_PASSWORD }}" > .kamal/secrets
+        run: echo "KAMAL_REGISTRY_PASSWORD=\"${{ secrets.DOCKER_PASSWORD }}\"" > .kamal/secrets
 
       - name: Set up SSH
         run: |
