@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: secrets:
+      - name: secrets
         run: mkdir .kamal && echo "KAMAL_REGISTRY_PASSWORD=${{ secrets.DOCKER_PASSWORD }}" > .kamal/secrets
       - name: Set up SSH
         run: |
